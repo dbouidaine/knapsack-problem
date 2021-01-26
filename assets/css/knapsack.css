@@ -1,0 +1,105 @@
+@font-face{
+    font-family: ubuntu;
+    src: url('../fonts/ubuntu/Ubuntu-Regular.ttf') format('truetype');
+    font-family: cascadia;
+    src: url('../fonts/cascadia/Cascadia.ttf') format('truetype');
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: ubuntu;
+    font-size: x-large;
+    margin-top: 0;
+    margin-left: 0;
+    width: 100%;
+    color: #323643;
+}
+footer{
+    padding: 2%;
+}
+.container{
+    padding: 0.5%;
+    align-items: center;
+    text-align: center;
+}
+
+.h-photo{
+    width: 100%;
+}
+.h-video{
+    padding: 4%;
+}
+h1#titre:hover{
+    color:#868fac;
+}
+/********************Obectifs 3********************/
+table{
+    border-collapse: collapse;
+    text-align: center;
+}
+table,th,td {
+    border: 1px solid #ddd;
+}
+th,td{
+    padding: 15px;
+}
+table th{
+    background-color: #fafafa;
+}
+table{
+    border: 3px dotted #ddd;
+}
+tbody>tr:nth-child(2n){
+    background-color: #fafafa;
+}
+h1#titre{
+    font-family: ubuntu;
+    font-size: 50pt;
+    font-weight: bold;
+    font-style: italic;
+}
+/***************************************************/
+/********************Obectifs 6********************/
+form>input{
+    font-family: Cascadia;
+    border: 2px solid  #f5f3f5;
+    padding: 1%;
+    margin-top:1%;
+}
+form>button{
+    font-family: Cascadia;
+    border: none;;
+    padding:1%;
+    color:#f5f3f5 ;
+    background-color: #323643;
+
+}
+form>button:hover{
+    cursor:pointer;
+    background-color:#868fac ;
+}
+/***************************************************/
+/********************Obectifs 7********************/
+form>a,a{
+    font-family: Cascadia;
+    border: none;;
+    padding:2%;
+    color:red ;
+    text-decoration: none;
+}
+form>a:hover,a:hover{
+    color:white;
+    background-color: red;
+}
+/***************************************************/
+.resultat{
+    color: white;
+    background-color:#868fac ;
+}
+.resultat:hover{
+    background-color: #323643;
+}
+h3{
+    font-family: cascadia;
+}

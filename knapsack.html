@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knapsack Probleme</title>
+    <link rel="stylesheet" href="assets/css/knapsack.css">
+</head>
+<body>
+    
+    <center><h1>Problème du sac à dos</h1></center>
+    <center><h2>Résolution avec la Programmation Dynamique</h2></center>
+    <center>
+    <table width="50%">
+        <thead>
+            <tr>
+                <th>
+                    Objet
+                </th>
+                <th>
+                    Valeur
+                </th>
+                <th>
+                    Poids
+                </th>
+                <th>
+                    REMOVE
+                </th>
+            </tr>
+        </thead>
+        <tbody id="obj">
+            <tr>
+                <td>1</td>
+                <td class="valeur" contenteditable="true">15</td>
+                <td class="weight" contenteditable="true">5</td>
+                <td><a class="remove" href="#">remove</a></td>
+            </tr>
+        </tbody>
+    </table>
+    </center>
+    <section>
+        <center>
+            <form>
+                <input id="value" type="text" placeholder="Valeur">
+                <input id="weight" type="text" placeholder="Poids">
+                <button id="form-btn">Ajouter Objet</button>
+            </form>
+        </center>
+        </div>
+    </section>
+    <section style="margin-top: 2%;">
+        <center>
+            <table>
+                <tbody>
+                    <tr >
+                        <th>Poids</th>
+                        <td id="poids" style="min-width: 60px;" contenteditable="true"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </center>
+        </div>
+    </section>
+
+    <section style="margin-top: 5%;background-color: #f5f3f5;">
+        <center>
+            <a class="resultat" onclick="result()" href="#result">Afficher Résultat</a>
+            <div id="result" style=" padding: 4%;">
+
+            </div>
+        </center>
+        </div>
+    </section>
+    <script type="text/JavaScript" src="assets/js/jquery.min.js"></script>
+    <script type="text/JavaScript" src="assets/js/knapsack.js"></script>
+</body>
+</html>
