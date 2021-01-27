@@ -103,3 +103,7 @@ form>a:hover,a:hover{
 h3{
     font-family: cascadia;
 }
+
+.selected{
+    background-color: aquamarine;
+}

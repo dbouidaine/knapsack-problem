@@ -41,14 +41,21 @@ $("#form-btn").click(function(){
 });
 
 function result(){
+    $("#obj>tr>td").css("background-color","none");
+    $("#obj>tr>td").removeClass("selected");
     let w=parseInt($("#poids").text());
     let res=knapsack(w);
     console.log(res);
     $("#result").empty();
     $("#result").append(`<h3>La valeur maximale obtenue est: `+res+`</h3>`);
+    for(let element of trace){
+        let selector=`#obj>tr:nth-child(`+element[0]+`)>td`;
+        $(selector).addClass("selected");
+    }
 }
-
+let trace=[];
 const knapsack=(w)=>{
+    trace=[];
     let val=getValue();
     let weight=getWeight();
     let n=val.length;
@@ -67,32 +74,20 @@ const knapsack=(w)=>{
             }
         }
     }
-    return k[n][w];
-}
-
-
-/*const table=(n,value)=>{
-    let k=[];
-    for(let i=0;i<=n;i++){
-        k.push([]);
-        for(let j=0;j<=n;j++){
-            k[i][j]=value;
-            value+=1;
+    
+    let res=[];
+    res.push(k[n][w]);
+    let r=res[0];
+    let wt=w;
+    for (let i = n; i > 0 && r > 0; i--) { 
+        if (r == k[i - 1][wt]) 
+        continue;
+        else { 
+            trace.push([i,weight[i - 1],val[i-1]]); 
+            r = r - val[i - 1]; 
+            wt = wt - weight[i - 1]; 
         }
     }
-    return k;
+    console.log(trace);
+    return k[n][w];
 }
-
-let memory=new Map();
-const max = (n,m)=>{
-    return (n>m)?n:m;
-}
-
-const knapsack=(c,)=>{
-    memory=new Map();
-    
-}
-
-getTable(id){
-
-}*/
